@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "7f8e4a17-7a3f-4c97-8a81-859a29a01d27",
+		"name": "Student Management System",
+		"description": "A collection of requests for testing the Student Management System REST APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Test Student\",\r\n  \"email\": \"test.student@example.com\",\r\n  \"phoneNumber\": \"+9876543210\",\r\n  \"course\": \"Data Science\",\r\n  \"yearOfStudy\": 3\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students"
+					]
+				},
+				"description": "Creates a new student record in the system"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students"
+					]
+				},
+				"description": "Retrieves a list of all students in the system"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Student by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students",
+						"1"
+					]
+				},
+				"description": "Retrieves a specific student by their ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Student",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Updated Student Name\",\r\n  \"email\": \"updated.email@example.com\",\r\n  \"phoneNumber\": \"+1234567890\",\r\n  \"course\": \"Computer Science\",\r\n  \"yearOfStudy\": 3\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students",
+						"1"
+					]
+				},
+				"description": "Updates an existing student's information"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Student",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students",
+						"1"
+					]
+				},
+				"description": "Deletes a student record from the system"
+			},
+			"response": []
+		},
+		{
+			"name": "Search Students by Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/students/search?name=John",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "John"
+						}
+					]
+				},
+				"description": "Searches for students by their name"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Students by Course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/students/course/Computer Science",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students",
+						"course",
+						"Computer Science"
+					]
+				},
+				"description": "Retrieves students enrolled in a specific course"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Students by Year",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/students/year/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students",
+						"year",
+						"2"
+					]
+				},
+				"description": "Retrieves students in a specific year of study"
+			},
+			"response": []
+		}
+	]
+}
