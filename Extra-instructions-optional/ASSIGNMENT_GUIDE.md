@@ -131,5 +131,3 @@ student-management-system/
 └── README.md
 ```
 
-## GitHub Repository
-Create a GitHub repository and push your code there for submission.
