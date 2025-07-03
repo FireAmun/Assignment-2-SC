@@ -1,7 +1,5 @@
 # SQL Commands for Video Demo
 
-Use these commands during your video presentation to demonstrate both the H2 database console and the REST API functionality.
-
 ## H2 Console Demo Commands
 
 ### 1. View All Students
